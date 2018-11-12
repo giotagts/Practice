@@ -3,9 +3,9 @@
 #include <algorithm>
 using namespace std;
 
-   
+
    vector<string> lexiko;
-   
+
    vector<string> del(vector<string> temp);
    vector<string> del(vector<string> temp)
    {
@@ -19,7 +19,7 @@ using namespace std;
 		}
 
 	}
-   
+
    	return lexiko;
    }
 // main() is where program execution begins.
@@ -27,25 +27,26 @@ int main() {
 	vector<string> temp;
 	vector<string> lex;
 	string x;
-	cout << "Give the entries. To end up insert q \n";
+  cout << "This is a kind of dictionary. By giving some key-names, it returns them in alphabetical order \n";
+	cout << "Give the entries. \nTo end up insert q \n";
    while(cin >> x)
    {
     if(x=="q")
     	break;
     temp.push_back(x);
    }
-   
-   sort(temp.begin(),temp.end());   
+
+   sort(temp.begin(),temp.end());
    cout << "The sorted list is: \n";
-   
+
    for (int i = 0; i < temp.size(); i++)
 	 cout << "v[" << i << "] == " << temp[i] << '\n';
-	 
+
 	cout << "The distinct values of the entries are: \n";
-	lex=del(temp); 
+	lex=del(temp);
 	for (int i = 0; i < lex.size(); i++)
 	 cout << "new[" << i << "] == " << lex[i] << '\n';
-	
-	
+
+
    return 0;
 }
